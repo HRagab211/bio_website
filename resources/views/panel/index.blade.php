@@ -1,7 +1,7 @@
 
 @extends('panel/header/header')
 @section('title','Panel')
-
+<a href="{{route('logout')}}">Logout</a>
     <section class="my-5">
         <div class="container">
             <div class="row">
@@ -56,7 +56,7 @@
                             <h5 class="card-title text-uppercase">social media</h5>
                             <h6 class="card-subtitle mb-2 text-muted">change social media information</h6>
                             <p class="card-text">this feature make you change easily your social media in website..</p>
-                            <a href="#" class="card-link">Go to this feature</a>
+                            <a href="{{route('social.index')}}" class="card-link">Go to this feature</a>
                         </div>
                     </div>
                 </div>

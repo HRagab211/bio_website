@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Stmt\Echo_;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
 
     public function show(){
@@ -25,16 +25,16 @@ class AdminController extends Controller
 //                            ->where('password',$request->password)
 //                            ->first();
         $admin =$request->only('email','password');
-        $ad=Auth::attempt($admin);
-        dd($ad);
            if(Auth::attempt($admin))
                 {
                     return redirect()->route('panel.system');
                 }
 
 
-           return 'Incorrect username or password';
-
+           return 'Incorrect username or password';}
+    public function logout(){
+        Auth::logout();
+        return redirect(route('index'));
     }
 }
 

@@ -1,5 +1,5 @@
 @include('panel/header/sidebar')
-      <aside style="background-image: url(img/profile_big.jpg);"></aside>
+@include('panel/header/image')
       <main>
         <a href="{{route('index')}}" class="home-button"><span class="fa fa-home"></span></a>
         <h1 class="mb-5">Portfolio</h1>

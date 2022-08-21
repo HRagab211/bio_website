@@ -1,7 +1,6 @@
 
        @include('panel/header/sidebar')
-
-        <aside style="background-image: url(img/profile_big.jpg);"></aside>
+       @include('panel/header/image')
         <main>
             <h1 class="mb-0">Hi, I'm {{$bios->name}}</h1>
             <div class="mb-5">
@@ -10,9 +9,9 @@
             </div>
 
             <p>
-                <a href="#" class="mr-2 mb-2">Twitter</a>
-                <a href="#" class="mr-2 mb-2">Facebook</a>
-                <a href="#" class="mr-2 mb-2">Instagram</a>
+                @foreach($social as $s)
+                <a href="{{$s->social_link}}" class="mr-2 mb-2">{{$s->social_name}}</a>
+                @endforeach
             </p>
 {{--           <h2 class="mb-4 mt-5">Services</h2>--}}
 {{--        <div class="row">--}}
